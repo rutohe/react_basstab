@@ -17,11 +17,24 @@ Reactを使ってベースのタブ譜を作れるアプリを開発予定です
 - React
 ## データ構造案
 ```js
-{
-    string:1,        //4弦ベース用に作るので1~4
-    fret:1,          //0(開放弦)~21まで
-    hammer_on:true,  //ハンマリング
-    pull_off:false,  //プルオフ
-    bar:false,       //小説線か否か
+column = {
+    fret:[1,null,null,null],    //-1(ミュート)と0(開放弦)~21まで
+    hammer_on:true,             //ハンマリング
+    pull_off:false,             //プルオフ
+    bar:false,                  //小節線か否か
 }
+row = [column,column,...];      //columnの集合で譜面を表現
 ```
+## コンポーネント分割案
+#### App
+- state管理
+- データ保存
+- 譜面全体表示
+#### row
+- column並べる
+- rowの再編集と削除
+#### column
+- 1列表示
+#### modal
+- columnへの入力受付
+- 必要ならUIからデータに変換
