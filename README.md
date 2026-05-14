@@ -30,11 +30,18 @@ row = [column,column,...];      //columnの集合で譜面を表現
 - state管理
 - データ保存
 - 譜面全体表示
-#### row
-- column並べる
-- rowの再編集と削除
-#### column
+#### Row
+- column並べて表示
+#### Column
 - 1列表示
-#### modal
+#### Modal
 - columnへの入力受付
 - 必要ならUIからデータに変換
+
+## 進捗
+#### 5/13
+- 作成開始
+- 設計計画を建てた
+#### 5/14
+- Modal,Column,Rowを作成
+- 表示関係のコンポーネントの仮完成
